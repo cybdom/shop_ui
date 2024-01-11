@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 class CircularButton extends StatelessWidget {
   final String title;
   final IconData icon;
-  final int number;
+  final int? number;
   final GestureTapCallback onTap;
+
   const CircularButton(
-      {Key key, this.title, this.icon, this.number, this.onTap})
-      : super(key: key);
+      {super.key,
+      required this.title,
+      required this.icon,
+      this.number,
+      required this.onTap});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -26,7 +30,7 @@ class CircularButton extends StatelessWidget {
                   left: 3,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Colors.grey.shade200,
                       shape: BoxShape.circle,
                     ),
                     child: Icon(icon, color: Colors.black54),
@@ -44,14 +48,16 @@ class CircularButton extends StatelessWidget {
                             shape: BoxShape.circle,
                             color: Colors.blue,
                           ),
-                          child: FittedBox(
-                            child: Text(
-                              number > 9 ? "+9" : "$number",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
+                          child: number != null
+                              ? FittedBox(
+                                  child: Text(
+                                    number! > 9 ? "+9" : "$number",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                )
+                              : Container(),
                         ),
                       )
                     : Container(),
@@ -63,7 +69,7 @@ class CircularButton extends StatelessWidget {
           ),
           Text(
             title,
-            style: Theme.of(context).textTheme.subtitle,
+            style: Theme.of(context).textTheme.titleSmall,
           )
         ],
       ),

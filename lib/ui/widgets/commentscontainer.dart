@@ -10,7 +10,7 @@ class CommentsContainer extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 15.0),
       padding: EdgeInsets.all(25.0),
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: Colors.grey.shade200,
         borderRadius: BorderRadius.circular(15.0),
       ),
       child: Column(

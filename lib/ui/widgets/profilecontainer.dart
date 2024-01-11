@@ -14,7 +14,7 @@ class ProfileContainer extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey[200],
+            color: Colors.grey.shade200,
           ),
         ],
       ),
@@ -41,12 +41,15 @@ class ProfileContainer extends StatelessWidget {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Text(
-                          MyStrings.user_name,
-                          style: Theme.of(context)
-                              .textTheme
-                              .title
-                              .apply(fontWeightDelta: 2, color: Colors.white),
+                        Expanded(
+                          child: Text(
+                            MyStrings.user_name,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
+                                ?.apply(
+                                    fontWeightDelta: 2, color: Colors.white),
+                          ),
                         ),
                         SizedBox(width: 15.0),
                         GestureDetector(
@@ -63,8 +66,8 @@ class ProfileContainer extends StatelessWidget {
                       MyStrings.bio,
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
-                          .apply(color: Colors.white),
+                          .titleSmall
+                          ?.apply(color: Colors.white),
                     ),
                   ],
                 ),
@@ -81,13 +84,13 @@ class ProfileContainer extends StatelessWidget {
                     "849",
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .apply(color: Colors.white),
+                        .titleLarge
+                        ?.apply(color: Colors.white),
                   ),
                   SizedBox(height: 3.0),
                   Text(
                     MyStrings.collect,
-                    style: TextStyle(color: Colors.grey[300]),
+                    style: TextStyle(color: Colors.grey.shade300),
                   ),
                 ],
               ),
@@ -97,13 +100,13 @@ class ProfileContainer extends StatelessWidget {
                     "51",
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .apply(color: Colors.white),
+                        .titleLarge
+                        ?.apply(color: Colors.white),
                   ),
                   SizedBox(height: 3.0),
                   Text(
                     MyStrings.attention,
-                    style: TextStyle(color: Colors.grey[300]),
+                    style: TextStyle(color: Colors.grey.shade300),
                   ),
                 ],
               ),
@@ -113,13 +116,13 @@ class ProfileContainer extends StatelessWidget {
                     "291",
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .apply(color: Colors.white),
+                        .titleLarge
+                        ?.apply(color: Colors.white),
                   ),
                   SizedBox(height: 3.0),
                   Text(
                     MyStrings.track,
-                    style: TextStyle(color: Colors.grey[300]),
+                    style: TextStyle(color: Colors.grey.shade300),
                   ),
                 ],
               ),
@@ -129,13 +132,13 @@ class ProfileContainer extends StatelessWidget {
                     "39",
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .apply(color: Colors.white),
+                        .titleLarge
+                        ?.apply(color: Colors.white),
                   ),
                   SizedBox(height: 3.0),
                   Text(
                     MyStrings.coupons,
-                    style: TextStyle(color: Colors.grey[300]),
+                    style: TextStyle(color: Colors.grey.shade300),
                   ),
                 ],
               ),

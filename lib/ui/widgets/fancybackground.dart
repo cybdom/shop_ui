@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:shop_ui/global.dart';
 
@@ -14,8 +12,8 @@ class FancyBackground extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.grey[200],
-              Colors.grey[300],
+              Colors.grey.shade200,
+              Colors.grey.shade300,
             ],
           ),
         ),

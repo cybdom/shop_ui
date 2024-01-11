@@ -20,15 +20,15 @@ class _CategoryListState extends State<CategoryList> {
         shrinkWrap: true,
         itemBuilder: (ctx, i) {
           return GestureDetector(
-            onTap: (){
+            onTap: () {
               setState(() {
-               _active = i; 
+                _active = i;
               });
             },
             child: Row(
               children: <Widget>[
                 SpecialCategoryItems(
-                  color: _active == i ? Colors.blue : Colors.grey[200],
+                  color: _active == i ? Colors.blue : Colors.grey.shade200,
                   icon: Icon(
                     horizontalMenuIcons[i],
                     color: _active == i ? Colors.white : Colors.black45,

@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 class SpecialCategoryItems extends StatelessWidget {
   final Color color;
   final Icon icon;
-  final GestureTapCallback onTap;
-  const SpecialCategoryItems({Key key, this.icon, this.onTap, this.color})
-      : super(key: key);
+  final GestureTapCallback? onTap;
+
+  const SpecialCategoryItems(
+      {super.key, required this.color, required this.icon, this.onTap});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,8 +25,8 @@ class SpecialCategoryItems extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 5.0,
-                      color: Colors.grey[200],
-                      offset: Offset(0,3),
+                      color: Colors.grey.shade200,
+                      offset: Offset(0, 3),
                     ),
                   ],
                   color: color,

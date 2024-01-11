@@ -82,16 +82,17 @@ class DetailsScreen extends StatelessWidget {
                             "Superpose",
                             style: Theme.of(context)
                                 .textTheme
-                                .title
-                                .apply(color: Colors.black, fontWeightDelta: 2),
+                                .titleLarge
+                                ?.apply(
+                                    color: Colors.black, fontWeightDelta: 2),
                           ),
                           SizedBox(height: 5.0),
                           Text(
                             "The smallest table lamp designer by X",
                             style: Theme.of(context)
                                 .textTheme
-                                .body2
-                                .apply(color: Colors.grey[500]),
+                                .bodyLarge
+                                ?.apply(color: Colors.grey[500]),
                           ),
                           SizedBox(height: 15.0),
                           Container(
@@ -105,8 +106,12 @@ class DetailsScreen extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 MyStrings.comments,
-                                style: Theme.of(context).textTheme.title.apply(
-                                    color: Colors.black, fontWeightDelta: 2),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleLarge
+                                    ?.apply(
+                                        color: Colors.black,
+                                        fontWeightDelta: 2),
                               ),
                               SizedBox(width: 15.0),
                               Text("\u2022 (3333)"),
@@ -160,7 +165,7 @@ class DetailsScreen extends StatelessWidget {
 
 class InfoListWidget extends StatefulWidget {
   const InfoListWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -184,11 +189,11 @@ class _InfoListWidgetState extends State<InfoListWidget> {
             margin: EdgeInsets.symmetric(horizontal: 9.0, vertical: 9.0),
             padding: EdgeInsets.all(15.0),
             decoration: BoxDecoration(
-              color: _active == i ? Colors.blue : Colors.grey[200],
+              color: _active == i ? Colors.blue : Colors.grey.shade200,
               borderRadius: BorderRadius.circular(15.0),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey[200],
+                  color: Colors.grey.shade200,
                   blurRadius: 5.0,
                   offset: Offset(0, 3),
                 ),

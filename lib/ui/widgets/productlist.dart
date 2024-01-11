@@ -36,7 +36,7 @@ class _ProductListState extends State<ProductList> {
                   alignment: Alignment.topCenter,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25.0),
-                    color: Colors.grey[200],
+                    color: Colors.grey.shade200,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(9.0),
@@ -59,7 +59,7 @@ class _ProductListState extends State<ProductList> {
                     boxShadow: [
                       BoxShadow(
                         blurRadius: 5.0,
-                        color: Colors.grey[300],
+                        color: Colors.grey.shade300,
                         offset: Offset(0, 1),
                       )
                     ],
@@ -70,11 +70,11 @@ class _ProductListState extends State<ProductList> {
                     children: <Widget>[
                       Text(
                         "Landscape",
-                        style: Theme.of(context).textTheme.title,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                       Text(
                         "Matter made",
-                        style: Theme.of(context).textTheme.subhead,
+                        style: Theme.of(context).textTheme.titleMedium,
                       ),
                       Row(
                         children: <Widget>[
